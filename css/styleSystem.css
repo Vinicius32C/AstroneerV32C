@@ -1,0 +1,449 @@
+/*----------------------------------------------Sistemas---------------------------------------------- */
+
+#initialContainer img{
+    width: 150px;
+    filter: brightness(100);
+}
+
+#systemHome {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-between;
+    border-bottom: solid 4px var(--astroneerBorderT);
+}
+
+#systemImg {
+    width: 100%;
+    height: fit-content;
+}
+
+#systemImg img {
+    width: 100%;
+    height: auto;
+}
+
+#imageM{
+    display: none;
+}
+
+#imageP{
+    display: flex;
+}
+
+#solarSystem {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    pointer-events: all;
+}
+
+.planets {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.planets a {
+    width: 100%;
+    height: 100%;
+}
+
+.planets:hover {
+    cursor: pointer;
+    transition: .2s;
+}
+
+#systemSun {
+    top: 4.5%;
+    left: 4.5%;
+    height: 9.5vw;
+    width: 9.5vw;
+    background-image: url('../pagesimgs/sunSystem.webp');
+}
+
+#systemSun:hover {
+    width: 9.8vw;
+    height: 9.8vw;
+    top: calc(4.5% - .2vw);
+    left: calc(4.5% - .3vw);
+    cursor: default;
+    transition: .2s;
+}
+
+#systemAtrox {
+    top: 13%;
+    left: 21%;
+    height: 9.5vw;
+    width: 9.5vw;
+    background-image: url('../pagesimgs/atroxSystem.webp');
+}
+
+#systemAtrox:hover {
+    width: 9.8vw;
+    height: 9.8vw;
+    top: calc(13% - .2vw);
+    left: calc(21% - .3vw);
+}
+
+#systemCalidor {
+    top: 32.5%;
+    left: 23.7%;
+    height: 12.5vw;
+    width: 12.5vw;
+    background-image: url('../pagesimgs/calidorSystem.webp');
+}
+
+#systemCalidor:hover {
+    width: 12.8vw;
+    height: 12.8vw;
+    top: calc(32.5% - .2vw);
+    left: calc(23.7% - .3vw);
+}
+
+#systemSylva {
+    top: 25.7%;
+    left: 43.3%;
+    height: 12vw;
+    width: 12vw;
+    background-image: url('../pagesimgs/sylvaSystem.webp');
+}
+
+#systemSylva:hover {
+    width: 12.3vw;
+    height: 12.3vw;
+    top: calc(26.2% - .2vw);
+    left: calc(43.3% - .3vw);
+}
+
+#systemDesolo {
+    top: 35.8%;
+    left: 53.7%;
+    height: 7vw;
+    width: 7vw;
+    background-image: url('../pagesimgs/desoloSystem.webp');
+}
+
+#systemDesolo:hover {
+    width: 7.3vw;
+    height: 7.3vw;
+    top: calc(36% - .2vw);
+    left: calc(53.7% - .3vw);
+}
+
+#systemNovus {
+    top: 64.7%;
+    left: 50.7%;
+    height: 6vw;
+    width: 6vw;
+    background-image: url('../pagesimgs/novusSystem.webp');
+}
+
+
+#systemNovus:hover {
+    width: 6.3vw;
+    height: 6.3vw;
+    top: calc(64.7% - .2vw);
+    left: calc(50.7% - .3vw);
+}
+
+#systemVesania {
+    top: 53.3%;
+    left: 56.7%;
+    height: 12.8vw;
+    width: 12.8vw;
+    background-image: url('../pagesimgs/vesaniaSystem.webp');
+}
+
+#systemVesania:hover {
+    width: 13.1vw;
+    height: 13.1vw;
+    top: calc(53.6% - .2vw);
+    left: calc(56.7% - .3vw);
+}
+
+#systemGlacio {
+    top: 68.7%;
+    left: 82%;
+    height: 16.3vw;
+    width: 16.3vw;
+    background-image: url('../pagesimgs/glacioSystem.webp');
+}
+
+#systemGlacio:hover {
+    width: 16.6vw;
+    height: 16.6vw;
+    top: calc(69% - .2vw);
+    left: calc(82% - .3vw);
+}
+
+/*----------------------------------------------Sistemas Fim---------------------------------------------- */
+/*----------------------------------------------Sistemas Infos---------------------------------------------- */
+
+.info {
+    display: none;
+    position: absolute;
+    background-color: rgba(39, 39, 39, .8);
+    backdrop-filter: blur(20px);
+    height: fit-content;
+    width: 200px;
+    z-index: 1;
+    pointer-events: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 3px solid rgba(30, 30, 30, .8);
+}
+
+
+.info span,
+.info p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    color: var(--astroneerWhite);
+    text-align: left;
+    padding: 8px;
+}
+
+.info span {
+    font-size: 19px;
+}
+
+.info p {
+    font-size: 16px;
+}
+
+.planets:hover .info {
+    display: flex;
+}
+
+#infoSun {
+    left: 120%;
+}
+
+#infoAtrox {
+    left: 110%;
+    top: -5%;
+}
+
+#infoCalidor {
+    right: 110%;
+    top: 20%;
+}
+
+#infoSylva {
+    left: 110%;
+    top: -20%;
+}
+
+#infoDesolo {
+    left: 110%;
+    top: -5%;
+}
+
+#infoNovus {
+    right: 120%;
+    top: -60%;
+}
+
+#infoVesania {
+    left: 110%;
+}
+
+#infoGlacio {
+    right: 130%;
+    top: -60%;
+}
+
+.info .planetName {
+    width: 100%;
+    height: auto;
+    flex: 10%;
+    display: flex;
+    align-content: center;
+    border-bottom: 3px solid var(--astroneerBlue);
+}
+
+.info .aboutPlanet {
+    width: 100%;
+    height: auto;
+    flex: 90%;
+    padding-top: 10px;
+}
+
+#hoverWarning, #hoverWarningpt{
+    position: absolute;
+    color: var(--astroneerWhite);
+    font-family: "Rubik", sans-serif;
+    text-shadow: 0px 0px 10px white;
+    font-weight: 400;
+    top: 1.5vw;
+    right: 0px;
+    margin-right: 1.5vw;
+}
+
+#hoverWarning{
+    font-size: 50px;
+}
+
+#hoverWarningpt{
+    font-size: 32px;
+}
+
+.tcapContainers{
+    display: flex;
+    height: 300px;
+    padding: 20px;
+    width: fit-content;
+    backdrop-filter: blur(2px);
+}
+
+#tcAboutSystem, .tcapContainers{
+    flex-direction: row;
+
+}
+
+#tcAboutSystem img, .tcapContainers img{
+    height: auto;
+    padding-right: 20px;
+}
+
+#tcAboutSystem img{
+    filter: brightness(20);
+    width: 250px;
+}
+
+#tcAboutSystem .trContent{
+    width: 90%;
+}
+
+#tcAboutSystem{
+    background-image: url('../pagesimgs/backgroundStar4.webp');
+    background-size: 120%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#tcAboutSystem.tabChange{
+    padding: 20px;
+    max-height: 1000px;
+}
+
+#tcAboutPlanets{
+    justify-content: space-around;
+    background-image: url('../pagesimgs/backgroundStar4.webp');
+    background-size: 120%;
+    background-attachment: fixed;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: -2;
+    animation-name: backanim;
+    animation-duration: 200s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+#tcAboutPlanets.tabChange{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-height: 4000px;
+}
+
+.tcapContainers img{
+    width: 150px;
+}
+
+#tcAboutPlanets img{
+    width: 150px;
+}
+
+.tcapContainers>a>.trContent{
+    height: fit-content;
+    width: 500px;
+}
+
+.trclickable{
+    box-shadow: 0px 0px 5px 1px var(--astroneerWhite);
+    transition: .3s ease-out;
+}
+
+.trclickable:hover{
+    transform: scale(1.05);
+}
+
+.infoContent{
+    display: flex;
+    flex-direction: row;
+}
+
+/*----------------------------------------------Sistemas Infos Fim---------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    #infoCalidor {
+        right: 60%;
+        top: 20%;    
+    }
+    #hoverWarning{
+        font-size: 35px;
+    }
+
+    #hoverWarningpt{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    #imageM{
+        display: block;
+    }
+
+    #imageP{
+        display: none;
+    }
+
+    .planets {
+        display: none;
+    }
+
+    #infoCalidor {
+        right: 110%;
+        top: 20%;
+    }
+
+    #hoverWarning, #hoverWarningpt{
+        display: none;
+    }
+    
+    #tcAboutSystem, .infoContent{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tcAboutSystem img, #tcAboutPlanets img{
+        height: auto;
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+
+    #tcAboutPlanets{
+        justify-content: center;
+    }
+
+    .tcapContainers{
+        height: fit-content;
+    }
+
+    .tcapContainers>a>.trContent{
+        width: 280px;
+    }
+
+    #initialContainer img{
+        width: 80px;
+    }
+
+    #initialContainer span{
+        font-size: 28px;
+    }
+}
