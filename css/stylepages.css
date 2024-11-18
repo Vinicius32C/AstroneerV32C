@@ -1,0 +1,300 @@
+/*----------------------------------------------Pré definições---------------------------------------------- */
+main {
+    border-top: solid 80px var(--astroneerBlue);
+}
+
+body{
+    background-color: var(--astroneerWhite);
+    pointer-events: none;
+}
+
+#initialContainer{
+    width: 100%;
+    height: fit-content;
+    background-image: url('../pagesimgs/backgroundStars.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: right;
+    border-bottom: 4px solid var(--astroneerBorderT);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation-name: initialanim;
+    animation-duration: 360s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite
+}
+
+@keyframes initialanim{
+    0%{
+        background-position: top;
+    }
+
+    25%{
+        background-position: center;
+    }
+
+    50%{
+        background-position: bottom;
+    }
+
+    75%{
+        background-position: center;
+    }
+
+    100%{
+        background-position: top;
+    }
+}
+
+#initialContainer img{
+    height: auto;
+    padding-right: 1.5vw;
+}
+
+#initialContainer h1{
+    font-size: 90px;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    color: var(--astroneerWhite);
+    padding-right: 1.5vw;
+    text-shadow: 0px 0px 10px white;
+}
+
+.tabContainer {
+    height: fit-content;
+    width: 100%;
+}
+
+.tab{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabNContent{
+    background-color: var(--astroneerWhite);
+    display: flex;
+    padding: 20px 0 20px 1.5vw ;
+    border-bottom: 1px solid rgba(208,208,208, 1);
+    pointer-events: all;
+}
+
+.tabNContent span{
+    color: var(--astroneerBlue);
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.tabNContent:hover{
+    cursor: pointer;
+}
+
+.tabArrowContainer{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.tabArrow1, .tabArrow2{
+    width: 18px;
+    height: 4px;
+    background-color: var(--astroneerBlue);
+    transition: .1s;
+}
+
+.tabArrow1{
+    rotate: 45deg;
+}
+
+.tabArrow1.tabChange{
+    rotate: -45deg;
+}
+
+.tabArrow2{
+    rotate: -45deg;
+    transform: translateX(10px) translateY(4px);
+}
+
+.tabArrow2.tabChange{
+    rotate: 45deg;
+    transform: translateX(4px) translateY(-10px);
+}
+
+.tabContent{
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: var(--astroneerBlue);
+    transition: .5s;
+    overflow: hidden;
+    transition: 1s;
+    max-height: 0px;
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: -1;
+    pointer-events: all;
+    box-sizing: border-box;
+}
+
+.tabContent.tabChange{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trContent{
+    background-color: rgba(39, 39, 39, .8);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 3px solid rgba(30, 30, 30, .8);
+}
+
+.trContent span, .trContent p{
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    color: var(--astroneerWhite);
+    border: 0;
+}
+
+.trContent div{
+    padding: 10px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.trContent>div:first-child{
+    border-bottom: 3px solid var(--astroneerBlue);
+}
+
+#tcLink{
+    padding: 1.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../indeximgs/backgroundLittleAstroneers.webp);
+    background-size: 120%;
+    box-sizing: border-box;
+    justify-content: center;
+    animation-name: backanim;
+    animation-duration: 360s;
+    animation-iteration-count: infinite;
+    background-position: center;
+    animation-timing-function: ease-in-out;
+    z-index: -10;
+}
+@keyframes backanim{
+    0%{
+        background-position: center;
+    }
+
+    25%{
+        background-position: left;
+    }
+
+    50%{
+        background-position: center;
+    }
+
+    75%{
+        background-position: right;
+    }
+
+    100%{
+        background-position: center;
+    }
+}
+
+#tcLink .trContent{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: fit-content;
+    width: 90%;
+    margin: 20px;
+}
+
+#tcLink span{
+    color: var(--astroneerBlue);
+    font-family: 'Rubik', sans-serif;
+}
+
+#tcLink.tabChange{
+    max-height: 1000px;
+}
+
+#tcLink>div>a:first-of-type{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+#tcLink>div>a:not(:first-of-type){
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/*----------------------------------------------Pré definições Fim---------------------------------------------- */
+
+
+@media screen and (max-width: 850px) {
+    #initialContainer span{
+        font-size: 60px;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+    #initialContainer{
+        background-size: 670px;
+    }
+
+    #initialContainer img{
+        width: 45px;
+    }
+    
+    #initialContainer span{
+        font-size: 45px;
+    }
+
+    .tabNContent span{
+        font-size: 16px;
+    }
+
+    .trContent{
+        width: 90%;
+    }
+
+    .tabArrow1, .tabArrow2{
+        width: 9px;
+        height: 2px;
+        background-color: var(--astroneerBlue);
+        transition: .1s;
+    }
+    
+    .tabArrow2{
+        rotate: -45deg;
+        transform: translateX(6px) translateY(2px);
+    }
+    
+    .tabArrow2.tabChange{
+        rotate: 45deg;
+        transform: translateX(2px) translateY(-5px);
+    }
+
+    .tabArrowContainer{
+        height: 100%;
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+    }
+
+    #tcLink>.trContent{
+        width: fit-content;
+    }
+
+}

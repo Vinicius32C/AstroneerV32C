@@ -1,0 +1,256 @@
+/*----------------------------------------------Começo main------------------------------------------------ */
+
+#home {
+    width: 100%;
+    height: 700px;
+    background-image: url('../indeximgs/wallpaperAstroneer.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+#homeGradient {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-content: center;
+    justify-content: right;
+    box-sizing: border-box;
+    border-bottom: 5px solid var(--astroneerBorderT);
+}
+
+#homeTitle{
+    height: fit-content;
+    width: fit-content;
+}
+
+#homeTitle div{
+    text-align: right;
+}
+
+#homeTitle h1, #homeTitle h2{
+    color: var(--astroneerWhite);
+    text-shadow: 0px 0px 5px white;
+    font-family: Astroneer, "Rubik", sans-serif;
+    padding-right: 1.5vw;
+}
+
+#homeTitle h1{
+    font-size: 120px;
+}
+
+#homeTitle h2{
+    font-size: 70px
+}
+
+#containerAboutGuide{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--astroneerBlue);
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutGuide{
+    flex: auto;
+    height: fit-content;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+} 
+
+#aboutGuide span{
+    font-family: "Rubik", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--astroneerWhite);
+    padding: 10px;
+}
+
+#containerCarousel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#carouselWrapper{
+    display: flex;
+    transition: .5s ease-in-out;
+}
+
+.carouselslide{
+    min-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.carouselslide img{
+    width: 100%;
+    display: block;
+}
+
+.carouselButtons{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    color: var(--astroneerBlue);
+    cursor: pointer;
+    background-color: var(--astroneerWhite);
+    box-sizing: border-box;
+    border: 3px solid var(--astroneerBlue);
+    user-select: none; 
+}
+
+#cbLeft{
+    left: 0;
+    margin-left: 1.5vw;
+}
+
+#cbRight{
+    right: 0;
+    margin-right: 1.5vw;
+}
+
+.slideSeparator{
+    min-width: 20%;
+    height: 100%;
+}
+
+#containerPlatformsContents{
+    height: fit-content;
+    width: 100%;
+    background-color: var(--astroneerWhite);
+}
+
+#containerPlatformSpan{
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1.5vw;
+    text-shadow: 0px 0px 10px white;
+    display: inline-flex;
+}
+
+#containerPlatformSpan span{
+    font-family: "Rubik", sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    color: var(--astroneerBlue);
+    padding: 20px 0px;
+}
+
+#containerPlatforms{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--astroneerBlue);
+}
+
+.platform{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.platform a{
+    width: fit-content;
+}
+
+.platform img{
+    width: auto;
+    height: 80%;
+}
+
+#videoContainer{
+    position: relative; 
+    padding-bottom: 56.25%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#videoContainer iframe{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+#topVideoCover{
+    height: 10%;
+    width: 100%;
+    background-color: var(--astroneerWhite);
+    position: absolute;
+    display: flex;
+}
+
+#topVideoCover img, #bottomVideoCover img{
+    height: 15px;
+    width: auto;
+    padding: 10px;
+}
+
+#bottomVideoCover{
+    height: 10%;
+    width: 100%;
+    top: 90%;
+    background-color: var(--astroneerWhite);
+    position: absolute;
+    display: flex;
+}
+
+#test{
+    height: 75px;
+    background-color: var(--astroneerWhite);
+    display: flex;
+}
+
+#test img{
+    height: 15px;
+    width: auto;
+    padding: 10px;
+}
+
+/*----------------------------------------------Fim main------------------------------------------------ */
+@media screen and (max-width: 670px) {
+
+    #homeTitle h1{
+        font-size: 60px;
+    }
+    
+    #homeTitle h2{
+        font-size: 35px
+    }
+    
+    #aboutGuide span{
+        font-size: 36px;
+    }
+
+    #containerPlatformSpan span{
+        font-size: 36px;
+    }
+
+    #containerPlatforms{
+        height: 100px;
+    }
+    
+    #videoContainer{
+        display: none;
+    }
+
+    .carouselButtons{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
